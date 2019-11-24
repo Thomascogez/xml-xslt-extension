@@ -11,22 +11,20 @@ xml-xsl-snippet is a simple snippet vscode extension with a list of xml and xsl 
 
 <b>Commands overview : </b>
 
+* !xsl
+* !xsltemplate
+* !xsltemplateMode
+* !xslapplytemplate
+* !xslapplytemplatemode
+* !xslvalof
+* !xslelement
+* !xslatr
+* !xslkey
+* !xslvalofkey
 
 
-		* !xsl
-		* !xsltemplate
-		* !xsltemplateMode
-		* !xslapplytemplate
-		* !xslapplytemplatemode
-		* !xslvalof
-		* !xslelement
-		* !xslatr
-		* !xslkey
-		* !xslvalofkey
 
-#### Commands
-
-
+#### Commands:
 
 ##### !xsl
 
@@ -118,4 +116,44 @@ xml-xsl-snippet is a simple snippet vscode extension with a list of xml and xsl 
 ```xml
 <xsl:value-of select="key('xslkeyName',@AttributeToMathWith})"/>
 ```
+
+
+
+### XML
+
+> Snippet location ./snippet/xml.json
+
+
+
+<b> Commands overviews </b>
+
+* !xml
+
+
+
+#### Commands
+
+##### !xml
+
+```xml
+<?xml version=\"1.0\" ?>
+<?xml-stylesheet type=\"text/xsl\" href="file.xsl"?>
+<!DOCTYPE dtdName SYSTEM "file.dtd">
+
+<xmlTag>
+    
+</xmlTag>
+```
+
+
+
+## Contributing
+
+```shell
+git clone https://github.com/Thomascogez/xml-xslt-extension.git
+```
+
+
+
+> command format !xmlORxslcommandname
 
