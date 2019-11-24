@@ -4,7 +4,7 @@
     "description": "Simple xml and xsl snippet generator",
     "version": "0.0.1",
     "homepage": "https://github.com/Thomascogez/xml-xslt-extension",
-    
+    "publisher":"wedzyou",
     "repository": {
 		"type": "git",
 		"url": "https://github.com/Thomascogez/xml-xslt-extension"
