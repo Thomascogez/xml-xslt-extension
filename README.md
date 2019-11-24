@@ -1,65 +1,121 @@
-# xml-xsl-snippet README
+# xml-xsl-snippet
 
-This is the README for your extension "xml-xsl-snippet". After writing up a brief description, we recommend including the following sections.
+xml-xsl-snippet is a simple snippet vscode extension with a list of xml and xsl base snippet 
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Snippet list
 
-For example if there is an image subfolder under your extension project workspace:
+### Xsl
 
-\!\[feature X\]\(images/feature-x.png\)
+> Snippet location ./snippet/xsl.json
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+<b>Commands overview : </b>
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+		* !xsl
+		* !xsltemplate
+		* !xsltemplateMode
+		* !xslapplytemplate
+		* !xslapplytemplatemode
+		* !xslvalof
+		* !xslelement
+		* !xslatr
+		* !xslkey
+		* !xslvalofkey
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+#### Commands
 
-For example:
 
-This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+##### !xsl
 
-## Known Issues
+```xml
+<?xml version="1.0"  encoding ="UTF-8" ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <body>
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
+```
 
-## Release Notes
+​	
 
-Users appreciate release notes as you update your extension.
+##### !xsltemplate
 
-### 1.0.0
+```xml
+<xsl:template match="xmlTag">
+</xsl:template>
+```
 
-Initial release of ...
 
-### 1.0.1
 
-Fixed issue #.
+##### !xsltemplateMode
 
-### 1.1.0
+```xml
+<xsl:template match="xmlTag" mode="modeName">
+</xsl:template>
+```
 
-Added features X, Y, and Z.
 
------------------------------------------------------------------------------------------------------------
 
-## Working with Markdown
+##### !xslapplytemplate
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+```xml
+<xsl:apply-templates select="templateName"/>
+```
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
 
-### For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+##### !xslapplytemplatemode
 
-**Enjoy!**
+```xml
+<xsl:apply-templates select="templateName" mode="modeName"/>
+```
+
+
+
+##### !xslvalof
+
+```xml
+<xsl:value-of select="templateNameOrXmlTagName"/>
+```
+
+
+
+##### !xslelement
+
+```xml
+<xsl:element name="htmlElementName">
+</xsl:element>
+```
+
+
+
+##### !xslatr
+
+```xml
+<xsl:attribute name="htmlAttributeName">
+</xsl:attribute>
+```
+
+
+
+##### !xslkey
+
+```xml
+<xsl:key name="keyName" match="XmlTagToMatch" use="@xmlAttributeToSelect" />
+```
+
+
+
+##### !xslvalofkey
+
+```xml
+<xsl:value-of select="key('xslkeyName',@AttributeToMathWith})"/>
+```
+
