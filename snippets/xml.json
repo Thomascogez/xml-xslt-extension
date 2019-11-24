@@ -1,0 +1,13 @@
+{
+    "Base xml document template with ref to xsl stylesheet" : {
+        "prefix":"!xml",
+        "body"  :[
+            "<?xml version=\"1.0\" ?>",
+            "<?xml-stylesheet type=\"text/xsl\" href=\"${1:file.xsl}\"?>",
+            "<!DOCTYPE ${2:dtdName} SYSTEM \"${3:file.dtd}\">",
+            "$0",
+            "<${4:xmlTag}>",
+            "</${4:xmlTag}>"
+        ]
+    }
+}

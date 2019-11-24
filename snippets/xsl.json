@@ -1,0 +1,100 @@
+{
+    "Base xsl file template":{
+        "prefix":"!xsl",
+        "body" : [
+            "<?xml version=\"1.0\"  encoding =\"UTF-8\" ?>",
+            "<xsl:stylesheet version=\"1.0 \" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">",
+            "   <xsl:template match=\"/\">",
+            "       <html>",
+            "           <body>",
+            "$0",
+            "           </body>",
+            "       </html>",
+            "   </xsl:template>",
+            "</xsl:stylesheet>"
+        ],
+        "description":"Base xsl file template"
+    },
+
+    "Create a xsl template element":{
+        "prefix":"!xsltemplate",
+        "body":[
+            "<xsl:template match=\"${1:name}\">",
+                "$0",
+            "</xsl:template>"
+        ],
+        "description":"Create a xsl template tag"
+    },
+
+    "Create a xsl template with 'mode' attribute":{
+        "prefix":"!xsltemplateMode",
+        "body"  :[
+            "<xsl:template match=\"${1:name}\" mode=\"${2:mode}\">",
+                "$0",
+            "</xsl:template>" 
+        ],
+        "description":"Create a xsl template tag with mode attribute"
+    },
+    
+    "Create a xsl apply template tag":{
+        "prefix":"!xslapplytemplate",
+        "body"  : [
+            "<xsl:apply-templates select=\"${1:templateName}\"/>"
+        ],
+        "description":"Create a new xsl:apply-template tag"
+    },
+
+    "Create a xsl apply template tag with mode":{
+        "prefix":"!xslapplytemplatemode",
+        "body"  : [
+            "<xsl:apply-templates select=\"${1:templateName}\" mode=\"${2:mode}\"/>"
+        ],
+        "description":"Create a new xsl:apply-template tag with mode attribute"
+    },
+
+    "Create a value-of tag":{
+        "prefix":"!xslvalof",
+        "body":[
+            "<xsl:value-of select=\"${1:templatename}\"/>"
+        ],
+        "description":"Create xsl value-of tag"
+    },
+
+    "Create new xsl element tag": {
+        "prefix": "!xslelement",
+        "body"  : [
+            "<xsl:element name=\"${1:htmlElementName}\">",
+                "$0",
+            "</xsl:element>"
+        ],
+        "description": "Create a xsl element tag"
+    },
+
+    "Create new xsl attribute tag": {
+        "prefix": "!xslatr",
+        "body"  : [
+            "<xsl:attribute name=\"${1:htmlAttributeName}\">",
+                "${2:htmlAttributeValue}",
+            "</xsl:attribute>"
+        ],
+        "description": "Create a xsl attribute tag"
+    },
+    
+    "Create new xsl:key tag": {
+        "prefix":"!xslkey",
+        "body"  : [
+            "<xsl:key name=\"${1:name}\" match=\"${2:xmlTag}\" use=\"@${3:xmlAttribute}\" />" 
+        ],
+        "description":"Create nex xsl:key tag"
+    },
+
+    "Create new xsl:value-of select with a key reference": {
+        "prefix":"!xslvalofkey",
+        "body"  :[
+            "<xsl:value-of select=\"key('${1:keyName}',@${2:mathWith})\"/>"
+        ],
+        "description":"Create xsl value-of tag with id ref select"
+    }
+    
+    
+}
