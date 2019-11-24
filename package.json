@@ -3,6 +3,13 @@
     "displayName": "xml-xsl-snippet",
     "description": "Simple xml and xsl snippet generator",
     "version": "0.0.1",
+    "homepage": "https://github.com/Thomascogez/xml-xslt-extension",
+    
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/Thomascogez/xml-xslt-extension"
+	},
+    "icon":"icon.png",
     "engines": {
         "vscode": "^1.40.0"
     },
