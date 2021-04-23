@@ -1,4 +1,5 @@
 # xml-xsl-snippet
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/wedzyou.xml-xsl-snippet)
 
 xml-xsl-snippet is a simple snippet vscode extension with a list of xml and xsl base snippet 
 
